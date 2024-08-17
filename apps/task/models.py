@@ -5,15 +5,12 @@ from django.db import models
 class Task(models.Model):
     title = models.CharField(
         max_length=100,
-        verbose_name='Название задачи'
-    )
+        verbose_name='Название задачи')
     description = models.TextField(
-        verbose_name="Описание для таска"
-        )
+        verbose_name="Описание для таска")
     completed = models.BooleanField(
         default=False, 
-        verbose_name="Статус задачи"
-        )
+        verbose_name="Статус задачи")
     created = models.DateTimeField(
         auto_now_add=True, 
         verbose_name="Время создания задачи")
